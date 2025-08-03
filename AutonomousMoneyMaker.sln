@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{512D0172-F69E-4326-BE9A-C373A33CCA4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutonomousMoneyMaker.Core", "src\AutonomousMoneyMaker.Core\AutonomousMoneyMaker.Core.csproj", "{1884E3C1-572D-4AD5-B3A7-EC4435E3CCCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutonomousMoneyMaker.Data", "src\AutonomousMoneyMaker.Data\AutonomousMoneyMaker.Data.csproj", "{3799C477-2FD5-42C5-BE3E-B91A30FA0165}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{41DFBFDF-586E-4D70-BAA6-37279033D051}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutonomousMoneyMaker.Tests.Unit", "tests\AutonomousMoneyMaker.Tests.Unit\AutonomousMoneyMaker.Tests.Unit.csproj", "{4377579E-1FB2-4B85-9C86-14DB9CEE1AFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutonomousMoneyMaker.Tests.Integration", "tests\AutonomousMoneyMaker.Tests.Integration\AutonomousMoneyMaker.Tests.Integration.csproj", "{370DA3DE-01CC-4BA3-99A0-EF749AB772F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutonomousMoneyMaker.Tests.Regression", "tests\AutonomousMoneyMaker.Tests.Regression\AutonomousMoneyMaker.Tests.Regression.csproj", "{7CE0CFFA-B4BD-4F67-8BE4-B00A828386FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutonomousMoneyMaker.Tests.Performance", "tests\AutonomousMoneyMaker.Tests.Performance\AutonomousMoneyMaker.Tests.Performance.csproj", "{7AD9FA5E-45EA-4353-A908-60963F3634DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutonomousMoneyMaker.Tests.EndToEnd", "tests\AutonomousMoneyMaker.Tests.EndToEnd\AutonomousMoneyMaker.Tests.EndToEnd.csproj", "{E435FCDC-51D2-4C34-A788-FA37D73335F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1884E3C1-572D-4AD5-B3A7-EC4435E3CCCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1884E3C1-572D-4AD5-B3A7-EC4435E3CCCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1884E3C1-572D-4AD5-B3A7-EC4435E3CCCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1884E3C1-572D-4AD5-B3A7-EC4435E3CCCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3799C477-2FD5-42C5-BE3E-B91A30FA0165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3799C477-2FD5-42C5-BE3E-B91A30FA0165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3799C477-2FD5-42C5-BE3E-B91A30FA0165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3799C477-2FD5-42C5-BE3E-B91A30FA0165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4377579E-1FB2-4B85-9C86-14DB9CEE1AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4377579E-1FB2-4B85-9C86-14DB9CEE1AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4377579E-1FB2-4B85-9C86-14DB9CEE1AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4377579E-1FB2-4B85-9C86-14DB9CEE1AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{370DA3DE-01CC-4BA3-99A0-EF749AB772F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{370DA3DE-01CC-4BA3-99A0-EF749AB772F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{370DA3DE-01CC-4BA3-99A0-EF749AB772F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{370DA3DE-01CC-4BA3-99A0-EF749AB772F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE0CFFA-B4BD-4F67-8BE4-B00A828386FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE0CFFA-B4BD-4F67-8BE4-B00A828386FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE0CFFA-B4BD-4F67-8BE4-B00A828386FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE0CFFA-B4BD-4F67-8BE4-B00A828386FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD9FA5E-45EA-4353-A908-60963F3634DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD9FA5E-45EA-4353-A908-60963F3634DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD9FA5E-45EA-4353-A908-60963F3634DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD9FA5E-45EA-4353-A908-60963F3634DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E435FCDC-51D2-4C34-A788-FA37D73335F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E435FCDC-51D2-4C34-A788-FA37D73335F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E435FCDC-51D2-4C34-A788-FA37D73335F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E435FCDC-51D2-4C34-A788-FA37D73335F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1884E3C1-572D-4AD5-B3A7-EC4435E3CCCD} = {512D0172-F69E-4326-BE9A-C373A33CCA4B}
+		{3799C477-2FD5-42C5-BE3E-B91A30FA0165} = {512D0172-F69E-4326-BE9A-C373A33CCA4B}
+		{4377579E-1FB2-4B85-9C86-14DB9CEE1AFF} = {41DFBFDF-586E-4D70-BAA6-37279033D051}
+		{370DA3DE-01CC-4BA3-99A0-EF749AB772F7} = {41DFBFDF-586E-4D70-BAA6-37279033D051}
+		{7CE0CFFA-B4BD-4F67-8BE4-B00A828386FA} = {41DFBFDF-586E-4D70-BAA6-37279033D051}
+		{7AD9FA5E-45EA-4353-A908-60963F3634DB} = {41DFBFDF-586E-4D70-BAA6-37279033D051}
+		{E435FCDC-51D2-4C34-A788-FA37D73335F1} = {41DFBFDF-586E-4D70-BAA6-37279033D051}
+	EndGlobalSection
+EndGlobal
