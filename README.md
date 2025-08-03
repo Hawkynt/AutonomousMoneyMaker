@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-GPL_3.0-blue)](https://licenses.nuget.org/GPL-3.0-or-later)
 ![Language](https://img.shields.io/github/languages/top/Hawkynt/AutonomousMoneyMaker?color=purple)
 
-This is entirely written by AI agents. I have no idea what they came up with, but maybe it will work.
+> This is entirely written by AI agents. I have no idea what they came up with, but maybe it will work.
 
 ## Purpose
 
