@@ -1,0 +1,47 @@
+name: Build artifacts
+
+# Shared build block, called by release.yml (manual) and nightly.yml (auto).
+# Per-package versioning: version.pl --stamp writes each csproj's OWN <Version> +
+# its folder's commit count. Builds the self-contained Linux app binary.
+# No NuGet package is produced by this repo.
+on:
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+# Force JavaScript-based actions to run on Node 24 instead of the deprecated Node 20 ahead of
+# the 2026-06-16 hard cutover, until we bump each action to a Node-24-native major version.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest                 # net8.0 is cross-platform
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.ref }}
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Stamp per-package versions
+        shell: bash
+        run: perl .github/workflows/scripts/version.pl --stamp
+
+      - name: Publish app (linux-x64, self-contained single file)
+        run: dotnet publish src/AutonomousMoneyMaker.Core/AutonomousMoneyMaker.Core.csproj -c Release -r linux-x64 --self-contained -p:PublishSingleFile=true -o dist/AutonomousMoneyMaker-linux-x64 --nologo
+      - name: Zip app
+        shell: bash
+        run: tar -czf dist/AutonomousMoneyMaker-linux-x64.tar.gz -C dist AutonomousMoneyMaker-linux-x64
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app-artifacts
+          path: dist/*.tar.gz
+          if-no-files-found: ignore

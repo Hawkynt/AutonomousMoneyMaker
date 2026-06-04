@@ -1,0 +1,54 @@
+name: CI
+
+# Event-driven (no cron). release.yml and nightly.yml reuse this.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_call: {}
+
+# Force JavaScript-based actions to run on Node 24 instead of the deprecated Node 20 ahead of
+# the 2026-06-16 hard cutover, until we bump each action to a Node-24-native major version.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  # App + libraries + tests are net8.0 (cross-platform), so they build/test on both OSes.
+  test:
+    name: test (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0                       # version.pl counts commits per project
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Stamp per-package versions
+        shell: bash
+        run: perl .github/workflows/scripts/version.pl --stamp
+      - name: Build solution
+        run: dotnet build AutonomousMoneyMaker.sln --configuration Release
+
+      # Required tier — only the unit tests block a merge.
+      - name: Unit tests
+        run: dotnet test tests/AutonomousMoneyMaker.Tests.Unit/AutonomousMoneyMaker.Tests.Unit.csproj --configuration Release --no-build
+
+      # Advisory tiers — slower/environment-dependent, report but never fail CI.
+      - name: Integration tests (advisory)
+        continue-on-error: true
+        run: dotnet test tests/AutonomousMoneyMaker.Tests.Integration/AutonomousMoneyMaker.Tests.Integration.csproj --configuration Release --no-build
+      - name: EndToEnd tests (advisory)
+        continue-on-error: true
+        run: dotnet test tests/AutonomousMoneyMaker.Tests.EndToEnd/AutonomousMoneyMaker.Tests.EndToEnd.csproj --configuration Release --no-build
+      - name: Performance tests (advisory)
+        continue-on-error: true
+        run: dotnet test tests/AutonomousMoneyMaker.Tests.Performance/AutonomousMoneyMaker.Tests.Performance.csproj --configuration Release --no-build
+      - name: Regression tests (advisory)
+        continue-on-error: true
+        run: dotnet test tests/AutonomousMoneyMaker.Tests.Regression/AutonomousMoneyMaker.Tests.Regression.csproj --configuration Release --no-build
