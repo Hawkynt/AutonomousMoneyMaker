@@ -23,37 +23,11 @@
 
 Should make me rich
 
-## 💝 Support This Project
-
-### 🎯 If This EA Makes You Money
-
-**Found success with this Expert Advisor?** Consider sharing the wealth! 
-
-- **Profit Sharing**: If you're making consistent profits, consider donating 5-10% of your monthly gains
-- **One-Time Donation**: Any amount helps fund continued development
-
-### 💳 Donation Methods
-
-- **GitHub**: Just click the "Sponsor" button at the top of this page
-
-### 🤝 Other Ways to Support
+## 🤝 Contributing
 
 - ⭐ **Star this repository** if you find it useful
 - 🐛 **Report bugs** and suggest improvements
 - 📖 **Contribute documentation** or code improvements
-- 📢 **Share with other traders** who might benefit
-
-### 💼 Commercial License
-
-Using this EA in a commercial trading environment? Consider purchasing a commercial license for:
-- Priority support
-- Custom strategy development
-- Performance optimization consultations
-- White-label licensing options
-
-**Contact**: Via GitHub
-
----
 
 ## ⚠️ Disclaimer
 
@@ -66,20 +40,13 @@ Using this EA in a commercial trading environment? Consider purchasing a commerc
 - Always test thoroughly in demo accounts first
 - Consider seeking advice from qualified financial advisors
 
-## 📄 License
+## ❤️ Support
 
-This project is licensed under the LGPLv3 License - see the [LICENSE](LICENSE) file for details.
+If this project saves you time or money, consider supporting its development:
 
-## 🤝 Contributing
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub-Sponsor-EA4AAA?logo=githubsponsors)](https://github.com/sponsors/Hawkynt)
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?logo=paypal)](https://www.paypal.me/hawkynt)
 
-Contributions are welcome! Please read our contributing guidelines and submit pull requests for any improvements.
+## 📜 License
 
----
-
-<div align="center">
-
-**Made with ❤️ for the trading community**
-
-*Remember: The best strategy is the one you understand and can stick to consistently!*
-
-</div>
+Licensed under LGPL-3.0-or-later — see [LICENSE](LICENSE).
