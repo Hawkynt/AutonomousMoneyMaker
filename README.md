@@ -14,7 +14,7 @@
 ![Repo Size](https://img.shields.io/github/repo-size/Hawkynt/AutonomousMoneyMaker?color=FF9800)
 
 [![Release](https://img.shields.io/github/v/release/Hawkynt/AutonomousMoneyMaker?sort=semver)](https://github.com/Hawkynt/AutonomousMoneyMaker/releases/latest)
-[![Nightly](https://img.shields.io/github/v/release/Hawkynt/AutonomousMoneyMaker?include_prereleases=true&sort=date&label=nightly&color=FF9800)](https://github.com/Hawkynt/AutonomousMoneyMaker/releases)
+[![Nightly](https://img.shields.io/github/v/release/Hawkynt/AutonomousMoneyMaker?include_prereleases&sort=date&label=nightly&color=FF9800)](https://github.com/Hawkynt/AutonomousMoneyMaker/releases)
 [![Downloads](https://img.shields.io/github/downloads/Hawkynt/AutonomousMoneyMaker/total)](https://github.com/Hawkynt/AutonomousMoneyMaker/releases)
 
 > This is entirely written by AI agents. I have no idea what they came up with, but maybe it will work.
