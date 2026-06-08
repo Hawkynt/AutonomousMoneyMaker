@@ -13,7 +13,7 @@
 ![Code Size](https://img.shields.io/github/languages/code-size/Hawkynt/AutonomousMoneyMaker?color=4CAF50)
 ![Repo Size](https://img.shields.io/github/repo-size/Hawkynt/AutonomousMoneyMaker?color=FF9800)
 
-[![Release](https://img.shields.io/github/v/release/Hawkynt/AutonomousMoneyMaker?sort=semver)](https://github.com/Hawkynt/AutonomousMoneyMaker/releases/latest)
+[![Release](https://img.shields.io/github/v/release/Hawkynt/AutonomousMoneyMaker)](https://github.com/Hawkynt/AutonomousMoneyMaker/releases/latest)
 [![Nightly](https://img.shields.io/github/v/release/Hawkynt/AutonomousMoneyMaker?include_prereleases&sort=date&label=nightly&color=FF9800)](https://github.com/Hawkynt/AutonomousMoneyMaker/releases)
 [![Downloads](https://img.shields.io/github/downloads/Hawkynt/AutonomousMoneyMaker/total)](https://github.com/Hawkynt/AutonomousMoneyMaker/releases)
 
