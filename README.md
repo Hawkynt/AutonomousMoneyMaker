@@ -19,17 +19,38 @@
 
 > This is entirely written by AI agents. I have no idea what they came up with, but maybe it will work.
 
-## Purpose
+## 🧭 Vision
+
+An experiment in whether a set of mechanical investment strategies, written down as code and
+backtested honestly, does better than guessing. Three strategies are implemented behind one
+interface — value investing, a diversified ETF allocation, and a crypto trend follower — so they can
+be compared on the same data rather than argued about.
+
+Nothing here places a real order. The value, if there is any, is in being able to test a strategy
+before believing it, which is the opposite of how most of them are adopted.
+
+## ✨ Features
+
+- Three strategies behind one `IInvestmentStrategy` interface — value investing, diversified ETF allocation and crypto trend following
+- A separate data layer, so a strategy is evaluated against the same series regardless of where it came from
+- Test suites split by kind: unit, integration, regression, performance and end-to-end
+
+## 📦 Installation
+
+Clone the repository and build it — see [Building](#-building). There is no released binary, and
+deliberately so: this is a study, not a product.
+
+## 🚀 Quick start
+
+```bash
+dotnet run --project src/AutonomousMoneyMaker.Core
+```
+
+## 🎯 Purpose
 
 Should make me rich
 
-## 🤝 Contributing
-
-- ⭐ **Star this repository** if you find it useful
-- 🐛 **Report bugs** and suggest improvements
-- 📖 **Contribute documentation** or code improvements
-
-## ⚠️ Disclaimer
+## ⚠️ Limitations
 
 **TRADING INVOLVES SUBSTANTIAL RISK OF LOSS**
 
@@ -39,6 +60,19 @@ Should make me rich
 - The author is not responsible for any trading losses
 - Always test thoroughly in demo accounts first
 - Consider seeking advice from qualified financial advisors
+
+## 🛠️ Building
+
+```bash
+dotnet build -c Release
+dotnet test
+```
+
+## 🤝 Contributing
+
+- ⭐ **Star this repository** if you find it useful
+- 🐛 **Report bugs** and suggest improvements
+- 📖 **Contribute documentation** or code improvements
 
 ## ❤️ Support
 
